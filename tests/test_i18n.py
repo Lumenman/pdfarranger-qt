@@ -18,6 +18,7 @@
 
 import os
 import unittest
+import unittest.mock
 
 
 from support import HERE
@@ -136,6 +137,19 @@ class TestTranslations(unittest.TestCase):
             self.assertNotEqual(self.i18n.gettext_("_Open"), "_Open",
                                 f"{language} did not translate")
 
+    def test_frozen_looks_where_pyinstaller_unpacks(self):
+        """Regression: the Windows bundle found no catalogue at all.
+
+        PyInstaller puts datas under sys._MEIPASS (`_internal/` beside the exe),
+        never in the exe's own directory, so every language silently did nothing.
+        """
+        import sys
+
+        with unittest.mock.patch.object(sys, "frozen", True, create=True),                 unittest.mock.patch.object(sys, "_MEIPASS", os.path.join("X", "_internal"),
+                                           create=True):
+            self.assertEqual(self.i18n.locale_dirs()[0],
+                             os.path.join("X", "_internal", "share", "locale"))
+
     def test_unknown_language_falls_back_to_msgids(self):
         self.assertEqual(self.i18n.setup("xx"), "")
         self.assertEqual(self.i18n.gettext_("_Open"), "_Open")
@@ -151,6 +165,35 @@ class TestTranslations(unittest.TestCase):
         win = MainWindow()
         self.addCleanup(win.close)
         self.assertEqual(win.act_save.text(), "&Speichern")
+
+    def test_qt_supplies_its_own_buttons_translated(self):
+        """OK and Cancel come from Qt, not from the catalogue here."""
+        from PySide6.QtWidgets import QApplication
+
+        from pdfarranger_qt.app import install_qt_translations
+
+        app = QApplication.instance()
+        self.assertTrue(install_qt_translations(app, "ru"))
+        self.addCleanup(app.removeTranslator, app._qt_translator)
+        self.assertEqual(app.translate("QPlatformTheme", "Cancel"), "Отмена")
+
+    def test_read_mode_still_leaves_the_file_menu_alone(self):
+        """Regression: a translated window greyed out Open, Save and Quit.
+
+        Read mode disables everything that edits, and the menus it spares were
+        matched by their English titles -- which nothing matches once the menu
+        bar is in Russian, the one catalogue that carries the Qt edition's own
+        menu names.
+        """
+        from pdfarranger_qt.mainwindow import MainWindow
+
+        self.i18n.setup("ru")
+        win = MainWindow()
+        self.addCleanup(win.close)
+        win.set_read_mode(True)
+        self.assertTrue(win.act_open.isEnabled())
+        self.assertTrue(win.act_quit.isEnabled())
+        self.assertFalse(win.act_rotate_left.isEnabled())
 
 
 class TestDoctests(unittest.TestCase):

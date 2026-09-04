@@ -326,7 +326,7 @@ msgstr "Горизонтальное смещение"
 
 #: pdfarranger/config.py:316
 msgid "Image Export"
-msgstr "Импортировать изображение"
+msgstr "Экспорт изображений"
 
 #: pdfarranger/core.py:583
 msgid "Image files are only supported with img2pdf"
@@ -995,3 +995,645 @@ msgstr "страница"
 #: pdfarranger/pdfarranger.py:1062
 msgid "untitled"
 msgstr "без_названия"
+
+# Strings added by the Qt edition (pdfarranger_qt), which has menus,
+# bookmarks, a reading mode and a user guide the GTK version does not.
+
+msgid "<b>Add Bookmark Here</b> makes one pointing at the page you are reading, named after whatever text you have selected — so select a heading, then add. With nothing selected it is named after the page. <b>Add Child Bookmark Here</b> does the same, nested under the entry you clicked."
+msgstr "<b>Добавить закладку здесь</b> создаёт закладку на ту страницу, которую вы читаете, и называет её выделенным текстом — то есть выделите заголовок, а затем добавьте закладку. Если ничего не выделено, она называется по номеру страницы. <b>Добавить дочернюю закладку здесь</b> делает то же самое, но вкладывает новую запись внутрь той, на которой вы щёлкнули."
+
+msgid "<b>Alt + scroll</b> — scroll exactly one row"
+msgstr "<b>Alt + прокрутка</b> — прокрутка ровно на один ряд"
+
+msgid "<b>Arrow keys</b> move between pages, <b>Page Up</b> and <b>Page Down</b> move a screenful at a time, and <b>Home</b> and <b>End</b> jump to the first and last page. Hold <b>Shift</b> with any of them to extend the selection."
+msgstr "<b>Клавиши со стрелками</b> перемещают между страницами, <b>Page Up</b> и <b>Page Down</b> — на экран за раз, а <b>Home</b> и <b>End</b> переходят к первой и последней странице. Удерживайте <b>Shift</b> с любой из них, чтобы расширить выделение."
+
+msgid "<b>Click and drag</b> on empty space — rubber-band select; keep scrolling to extend it"
+msgstr "<b>Нажмите и потяните</b> на пустом месте — выделение рамкой; продолжайте прокручивать, чтобы расширить его"
+
+msgid "<b>Ctrl + scroll</b> — zoom"
+msgstr "<b>Ctrl + прокрутка</b> — масштабирование"
+
+msgid "<b>Double-click</b> — fit the page to the window, and back"
+msgstr "<b>Двойной щелчок</b> — вписать страницу в окно и обратно"
+
+msgid "<b>File ▸ Password</b> encrypts the document when it is next saved. It is a switch: turn it on and you are asked for a password, turn it off and the next save is unencrypted. The password is never written to your settings, so it applies to this session only — and if you forget it, the file cannot be recovered."
+msgstr "<b>Файл ▸ Пароль</b> шифрует документ при следующем сохранении. Это переключатель: включите его — и у вас спросят пароль, выключите — и следующее сохранение будет без шифрования. Пароль никогда не записывается в настройки, поэтому действует только в текущем сеансе; а если вы его забудете, файл восстановить не удастся."
+
+msgid "<b>Find</b> selects the pages that contain the phrase and boxes each hit on the thumbnail, so you can see where on the page it is. The boxes clear as soon as you change the document, since the pages they were drawn for may have moved."
+msgstr "<b>Найти</b> выделяет страницы, содержащие фразу, и обводит каждое совпадение на миниатюре, чтобы было видно, где именно на странице оно находится. Рамки исчезают, как только вы изменяете документ, поскольку страницы, для которых они были нарисованы, могли переместиться."
+
+msgid "<b>Fit One Page</b> (F) scales so a whole page fits in the window and shows one page per row — use it to work on a single page at a time. <b>Fit Multiple Pages</b> (Shift+M) uses the same scale but lets as many pages sit side by side as the window takes. <b>Fit Width</b> (Shift+F) fills the window across instead, which shows the page wider but taller than the window. Double-clicking the grid toggles Fit One Page on and off."
+msgstr "<b>Уместить одну страницу</b> (F) подбирает масштаб так, чтобы страница целиком помещалась в окне, и показывает по одной странице в ряду — удобно, когда вы работаете с одной страницей за раз. <b>Уместить несколько страниц</b> (Shift+M) использует тот же масштаб, но размещает в ряду столько страниц, сколько вмещает окно. <b>По ширине</b> (Shift+F) заполняет окно по горизонтали: страница выглядит шире, но выше окна. Двойной щелчок по сетке включает и выключает режим «Уместить одну страницу»."
+
+msgid "<b>Paste As Odd/Even Pages</b> interleaves the clipboard with the document — this is how two single-sided scans of a double-sided original are recombined. If the second scan came off a duplex feeder it will be in reverse order; use <b>Arrange ▸ Reverse Order</b> on it first."
+msgstr "<b>Вставить как нечётные/чётные страницы</b> чередует содержимое буфера обмена со страницами документа — именно так объединяются два односторонних скана двустороннего оригинала. Если второй скан сделан на дуплексном податчике, он будет в обратном порядке; сначала примените к нему <b>Расположение ▸ Обратный порядок</b>."
+
+msgid "<b>Rename</b> edits the title in place. <b>Re-home to This Page</b> points an existing bookmark at the page you are on, keeping its title. <b>Delete</b> removes an entry and <i>promotes</i> its children into its place; <b>Delete with Children</b> removes the whole branch."
+msgstr "<b>Переименовать</b> изменяет заголовок на месте. <b>Перепривязать к этой странице</b> направляет существующую закладку на текущую страницу, сохраняя её заголовок. <b>Удалить</b> убирает запись и <i>поднимает</i> её дочерние записи на её место; <b>Удалить вместе с дочерними</b> убирает всю ветвь."
+
+msgid "<b>Shift + scroll</b> — scroll sideways"
+msgstr "<b>Shift + прокрутка</b> — прокрутка вбок"
+
+msgid "<b>Shift+click</b> extends an existing selection to where you clicked. The end you are moving grows out to a whole word, because a single click is an imprecise way to point at one character; the end you started from stays exactly where you put it. Dragging selects by character throughout, since you can watch it and stop where you like."
+msgstr "<b>Shift+щелчок</b> расширяет существующее выделение до точки щелчка. Тот край, который вы двигаете, дотягивается до целого слова, потому что одиночный щелчок — неточный способ указать на отдельный символ; тот край, с которого вы начали, остаётся ровно там, где вы его поставили. При перетаскивании выделение идёт посимвольно: вы видите его и можете остановиться где угодно."
+
+msgid "<b>Style</b> sets a bookmark bold or italic, or gives it a colour, as the tree shows."
+msgstr "<b>Стиль</b> делает закладку полужирной или курсивной либо задаёт ей цвет — так, как это показано в дереве."
+
+msgid "<b>View ▸ Continuous Scroll</b> is on by default; turning it off shows one page at a time. <b>View ▸ Facing Pages</b> puts two pages side by side, the way a book falls open. Both settings are remembered."
+msgstr "<b>Вид ▸ Непрерывная прокрутка</b> включена по умолчанию; если её выключить, показывается по одной странице. <b>Вид ▸ Разворот</b> размещает две страницы рядом, как в раскрытой книге. Обе настройки запоминаются."
+
+msgid "A bookmark whose page has been deleted is <b>greyed out</b> rather than removed: its title may still be worth keeping, and you can point it somewhere else with Re-home. Undoing the deletion reconnects it. <b>Delete Dangling Bookmarks</b> clears them all out; it leaves alone any entry that points nowhere on purpose, which is a legitimate way to write a heading."
+msgstr "Закладка, страница которой удалена, не исчезает, а становится <b>серой</b>: её заголовок может ещё пригодиться, и вы можете направить её в другое место командой «Перепривязать». Отмена удаления восстанавливает связь. <b>Удалить повисшие закладки</b> убирает их все; при этом не трогаются записи, которые намеренно никуда не ведут, — это законный способ оформить заголовок."
+
+msgid "Actual size"
+msgstr "Реальный размер"
+
+msgid "Add Bookmark"
+msgstr "Добавить закладку"
+
+msgid "Add Bookmark Here"
+msgstr "Добавить закладку здесь"
+
+msgid "Add Child Bookmark"
+msgstr "Добавить дочернюю закладку"
+
+msgid "Add Child Bookmark Here"
+msgstr "Добавить дочернюю закладку здесь"
+
+msgid "Add Shift to a Command or Option combination to extend the selection instead of moving — <b>Shift+Command+→</b> selects to the end of the line. Adding Option works by the word rather than the character. On Windows and Linux, read Command as Ctrl and Option as Alt; the table is the same everywhere."
+msgstr "Добавьте Shift к сочетанию с Command или Option, чтобы расширять выделение, а не перемещаться: <b>Shift+Command+→</b> выделяет до конца строки. Добавление Option переводит действие с символов на слова. В Windows и Linux читайте Command как Ctrl, а Option как Alt; таблица везде одинакова."
+
+msgid "Arrange"
+msgstr "Расположение"
+
+msgid "Arrange Mode"
+msgstr "Режим расположения"
+
+msgid "Arranging pages"
+msgstr "Расположение страниц"
+
+msgid "Blank page"
+msgstr "Пустая страница"
+
+msgid "Bold"
+msgstr "Полужирный"
+
+msgid "Bookmark Colour"
+msgstr "Цвет закладки"
+
+msgid "Bookmark Style"
+msgstr "Стиль закладки"
+
+msgid "Bookmark edits are part of the document and are written when you save, along with each entry's colour and style and which branches are left open. The one thing that cannot be saved is a bookmark with no page: there is no way to record “points at a page that is gone”, so it comes back as a heading with its title intact."
+msgstr "Правки закладок — часть документа и записываются при сохранении вместе с цветом и стилем каждой записи и с тем, какие ветви оставлены раскрытыми. Единственное, что сохранить невозможно, — закладка без страницы: записать «указывает на исчезнувшую страницу» негде, поэтому она возвращается как заголовок с сохранённым названием."
+
+msgid "Bookmarks"
+msgstr "Закладки"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Cannot open document"
+msgstr "Не удалось открыть документ"
+
+msgid "Centre"
+msgstr "По центру"
+
+msgid "Clear Menu"
+msgstr "Очистить меню"
+
+msgid "Click a link to follow it. Links to a page in the same document jump there; links to the web open in your browser. Hovering over one shows where it goes, which is worth reading before you click: many links in a PDF are not written by its author at all but inferred from the text, so what a link points at is not always what the words appear to say."
+msgstr "Щёлкните по ссылке, чтобы перейти по ней. Ссылки на страницу того же документа переходят туда, ссылки в интернет открываются в браузере. При наведении показывается, куда ведёт ссылка, и это стоит прочитать перед щелчком: многие ссылки в PDF написаны вовсе не автором, а выведены из текста, так что ссылка не всегда указывает туда, куда как будто говорят слова."
+
+msgid "Clicking on text leaves a blinking <b>text cursor</b>. That is what Shift+arrow extends from, and what the Option and Command combinations above move. It stays where you put it — scrolling, paging and clicking off the page all leave it alone — until you press Esc or open another document."
+msgstr "Щелчок по тексту оставляет мигающий <b>текстовый курсор</b>. Именно от него Shift+стрелка расширяет выделение и именно его перемещают описанные выше сочетания с Option и Command. Он остаётся там, где вы его поставили: прокрутка, листание и щелчки вне страницы его не трогают — пока вы не нажмёте Esc или не откроете другой документ."
+
+msgid "Collapse All Children"
+msgstr "Свернуть все дочерние"
+
+msgid "Colour…"
+msgstr "Цвет…"
+
+msgid "Command line"
+msgstr "Командная строка"
+
+msgid "Confirm password"
+msgstr "Подтвердите пароль"
+
+msgid "Continuous"
+msgstr "Непрерывно"
+
+msgid "Continuous Scroll"
+msgstr "Непрерывная прокрутка"
+
+msgid "Copied"
+msgstr "Скопировано"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Copy Link Address"
+msgstr "Копировать адрес ссылки"
+
+msgid "Copy Text"
+msgstr "Копировать текст"
+
+msgid "Copy the pages you want to merge in first."
+msgstr "Сначала скопируйте страницы, которые нужно вставить."
+
+msgid "Could not open a new window."
+msgstr "Не удалось открыть новое окно."
+
+msgid "Could not save:"
+msgstr "Не удалось сохранить:"
+
+msgid "Credits"
+msgstr "Благодарности"
+
+msgid "Cut"
+msgstr "Вырезать"
+
+msgid "Data not yet available"
+msgstr "Данные пока недоступны"
+
+msgid "Default Colour"
+msgstr "Цвет по умолчанию"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete Bookmark"
+msgstr "Удалить закладку"
+
+msgid "Delete Bookmark and Children"
+msgstr "Удалить закладку вместе с дочерними"
+
+msgid "Delete Dangling Bookmarks"
+msgstr "Удалить повисшие закладки"
+
+msgid "Delete with Children"
+msgstr "Удалить вместе с дочерними"
+
+msgid "Description"
+msgstr "Описание"
+
+msgid "Drag across the page to select text, across page boundaries if you keep going. <b>Double-click</b> selects a word. <b>Ctrl/Cmd+C</b> copies, <b>Ctrl/Cmd+A</b> selects the text of the page you are on, and <b>Esc</b> clears the selection. The same commands are on the right-click menu."
+msgstr "Проведите по странице, чтобы выделить текст, — если продолжать, выделение переходит и на соседние страницы. <b>Двойной щелчок</b> выделяет слово. <b>Ctrl/Cmd+C</b> копирует, <b>Ctrl/Cmd+A</b> выделяет текст текущей страницы, а <b>Esc</b> снимает выделение. Те же команды есть в контекстном меню."
+
+msgid "Drag entries within the sidebar to re-nest or reorder them. <b>Expand All Children</b> and <b>Collapse All Children</b> open or shut a whole branch at once."
+msgstr "Перетаскивайте записи внутри боковой панели, чтобы изменить их вложенность или порядок. <b>Развернуть все дочерние</b> и <b>Свернуть все дочерние</b> раскрывают или закрывают всю ветвь целиком."
+
+msgid "Drag pages onto another window of the application to copy them there, or use ordinary copy and paste."
+msgstr "Перетащите страницы в другое окно приложения, чтобы скопировать их туда, или воспользуйтесь обычным копированием и вставкой."
+
+msgid "Drag pages to reorder them. Hold <b>Ctrl</b> while dropping to copy instead of move."
+msgstr "Перетаскивайте страницы, чтобы изменить их порядок. Удерживайте <b>Ctrl</b> при отпускании, чтобы копировать, а не перемещать."
+
+msgid "Enter a password, or cancel to leave the document unencrypted."
+msgstr "Введите пароль или отмените, чтобы оставить документ незашифрованным."
+
+msgid "Every shortcut can be changed in <b>Edit ▸ Preferences ▸ Keyboard shortcuts</b>, where they are listed under the menu each one belongs to."
+msgstr "Любую комбинацию можно изменить в <b>Правка ▸ Параметры ▸ Комбинации клавиш</b>, где они перечислены по меню, которому принадлежат."
+
+msgid "Expand All Children"
+msgstr "Развернуть все дочерние"
+
+msgid "Explode into Images"
+msgstr "Разложить на изображения"
+
+msgid "Facing Pages"
+msgstr "Разворот"
+
+msgid "File not found"
+msgstr "Файл не найден"
+
+msgid "Files"
+msgstr "Файлы"
+
+msgid "Files given on the command line are opened as one document. <code>--version</code> prints the version and exits."
+msgstr "Файлы, указанные в командной строке, открываются как один документ. <code>--version</code> печатает версию и завершает работу."
+
+msgid "Find"
+msgstr "Найти"
+
+msgid "Finding text"
+msgstr "Поиск текста"
+
+msgid "Finishing…"
+msgstr "Завершение…"
+
+msgid "First Page"
+msgstr "Первая страница"
+
+msgid "Fit Width"
+msgstr "По ширине"
+
+msgid "Fit _Multiple Pages"
+msgstr "Уместить _несколько страниц"
+
+msgid "Fit _One Page"
+msgstr "Уместить _одну страницу"
+
+msgid "Fit to page"
+msgstr "По размеру страницы"
+
+msgid "Follow Link"
+msgstr "Перейти по ссылке"
+
+msgid "Following links"
+msgstr "Переход по ссылкам"
+
+msgid "Fullscreen"
+msgstr "Полноэкранный режим"
+
+msgid "General"
+msgstr "Общие"
+
+msgid "Generate Booklet"
+msgstr "Создать буклет"
+
+msgid "Go to Page"
+msgstr "Перейти к странице"
+
+msgid "Go to Page…"
+msgstr "Перейти к странице…"
+
+msgid "Go to {}"
+msgstr "Перейти к {}"
+
+msgid "Importing…"
+msgstr "Импорт…"
+
+msgid "Insert pages from another PDF or an image"
+msgstr "Вставить страницы из другого PDF или изображения"
+
+msgid "Invalid file format"
+msgstr "Неверный формат файла"
+
+msgid "It is a front end for pikepdf. Page content is never rewritten — only page order, geometry and composition."
+msgstr "Это надстройка над pikepdf. Содержимое страниц никогда не переписывается — меняются только порядок страниц, их геометрия и компоновка."
+
+msgid "Italic"
+msgstr "Курсив"
+
+msgid "Keep aspect ratio"
+msgstr "Сохранять пропорции"
+
+msgid "Keyboard shortcuts"
+msgstr "Комбинации клавиш"
+
+msgid "Keys"
+msgstr "Клавиши"
+
+msgid "Last Page"
+msgstr "Последняя страница"
+
+msgid "Licensed under the GNU General Public License version 3 or later."
+msgstr "Распространяется по лицензии GNU General Public License версии 3 или новее."
+
+msgid "Margins"
+msgstr "Поля"
+
+msgid "Middle"
+msgstr "Посередине"
+
+msgid "Mouse"
+msgstr "Мышь"
+
+msgid "Move"
+msgstr "Переместить"
+
+msgid "Move Bookmark"
+msgstr "Переместить закладку"
+
+msgid "Move to End"
+msgstr "Переместить в конец"
+
+msgid "Move to Page"
+msgstr "Переместить на страницу"
+
+msgid "Move to Page…"
+msgstr "Переместить на страницу…"
+
+msgid "Move to Start"
+msgstr "Переместить в начало"
+
+msgid "Moving around a document"
+msgstr "Перемещение по документу"
+
+msgid "Moving around the grid"
+msgstr "Перемещение по сетке"
+
+msgid "Needs pages copied from a document"
+msgstr "Требуются страницы, скопированные из документа"
+
+msgid "Next Page"
+msgstr "Следующая страница"
+
+msgid "No document"
+msgstr "Нет документа"
+
+msgid "No recent files"
+msgstr "Нет недавних файлов"
+
+msgid "Nothing to read."
+msgstr "Нечего читать."
+
+msgid "One page at a time"
+msgstr "По одной странице"
+
+msgid "One rule for the arrow keys: <b>the modifier decides what moves</b>. Nothing scrolls the view, Option (Alt) moves the text cursor, Shift extends the selection, Command (Ctrl) jumps to an edge, and Fn — Page Up, Page Down, Home and End — jumps further. None of it changes according to whether a text cursor happens to be on the page."
+msgstr "Для клавиш со стрелками действует одно правило: <b>что именно движется, определяет модификатор</b>. Без модификатора прокручивается вид, Option (Alt) перемещает текстовый курсор, Shift расширяет выделение, Command (Ctrl) переводит к краю, а Fn — Page Up, Page Down, Home и End — переносит ещё дальше. Ничто из этого не зависит от того, стоит ли на странице текстовый курсор."
+
+msgid "Only ordinary web and mail links are handed to the system — http, https, mailto and ftp. A document is a file that arrived from somewhere, and anything else it asks to open is refused and reported rather than acted on."
+msgstr "Системе передаются только обычные веб- и почтовые ссылки — http, https, mailto и ftp. Документ — это файл, пришедший неизвестно откуда, поэтому всё остальное, что он просит открыть, не выполняется, а отклоняется с сообщением."
+
+msgid "Open Link"
+msgstr "Открыть ссылку"
+
+msgid "Open Recent"
+msgstr "Открыть недавние"
+
+msgid "Opening an encrypted document asks for its password, which is remembered until the document is closed."
+msgstr "При открытии зашифрованного документа запрашивается пароль, который запоминается до закрытия документа."
+
+msgid "Original authors: Konstantinos Poulios, Jerome Robert."
+msgstr "Первоначальные авторы: Konstantinos Poulios, Jerome Robert."
+
+msgid "Overwrite existing files?"
+msgstr "Перезаписать существующие файлы?"
+
+msgid "PDF Arranger Qt is a PySide6 port of PDF Arranger, which is itself derived from PDF-Shuffler. It is a separate project and not affiliated with either."
+msgstr "PDF Arranger Qt — это порт PDF Arranger на PySide6; сам PDF Arranger происходит от PDF-Shuffler. Это отдельный проект, не связанный ни с тем, ни с другим."
+
+msgid "PDF Arranger merges, splits, rearranges, rotates and crops PDF documents. Everything happens in memory against the pages you can see; nothing is written until you save."
+msgstr "PDF Arranger объединяет, разделяет, переупорядочивает, поворачивает и обрезает документы PDF. Всё происходит в памяти, над страницами, которые вы видите; ничего не записывается, пока вы не сохраните."
+
+msgid "Page number:"
+msgstr "Номер страницы:"
+
+msgid "Page {}"
+msgstr "Страница {}"
+
+msgid "Page {} of {}"
+msgstr "Страница {} из {}"
+
+msgid "Pages are rasterised at this resolution before being sent to the printer. Lower it if printing is slow: the printer driver has less to process."
+msgstr "Перед отправкой на принтер страницы растрируются с этим разрешением. Уменьшите его, если печать идёт медленно: драйверу принтера придётся обрабатывать меньше данных."
+
+msgid "Pass_word"
+msgstr "Пар_оль"
+
+msgid "Passwords"
+msgstr "Пароли"
+
+msgid "Paste"
+msgstr "Вставить"
+
+msgid "Position"
+msgstr "Положение"
+
+msgid "Prefer these to cut and paste for moving. A pasted page is a <i>new</i> page as far as the document is concerned, so any bookmarks pointing at the original are left behind with nowhere to go. Moving keeps the page itself, and its bookmarks come with it."
+msgstr "Для перемещения предпочтительнее они, а не вырезание со вставкой. Вставленная страница для документа — <i>новая</i> страница, поэтому закладки, указывавшие на исходную, остаются ни с чем. Перемещение сохраняет саму страницу, и закладки переезжают вместе с ней."
+
+msgid "Preserve document information from the first file opened"
+msgstr "Сохранять сведения о документе из первого открытого файла"
+
+msgid "Previous Page"
+msgstr "Предыдущая страница"
+
+msgid "Project on GitHub"
+msgstr "Проект на GitHub"
+
+msgid "Re-home Bookmark"
+msgstr "Перепривязать закладку"
+
+msgid "Re-home to This Page"
+msgstr "Перепривязать к этой странице"
+
+msgid "Read"
+msgstr "Чтение"
+
+msgid "Reading"
+msgstr "Чтение"
+
+msgid "Reading shows the document <i>as edited</i>: rotations, crops, deletions and reordering are all applied, so what you read is what you would get if you saved. Page-editing commands are disabled while reading — bookmarks are the exception, and are edited here and nowhere else."
+msgstr "В режиме чтения документ показывается <i>с учётом правок</i>: повороты, обрезка, удаления и переупорядочивание уже применены, так что вы читаете то же, что получили бы при сохранении. Команды редактирования страниц во время чтения недоступны — исключение составляют закладки, которые правятся именно здесь и больше нигде."
+
+msgid "Rename"
+msgstr "Переименовать"
+
+msgid "Rename Bookmark"
+msgstr "Переименовать закладку"
+
+msgid "Reset"
+msgstr "Сбросить"
+
+msgid "Reverse Order"
+msgstr "Обратный порядок"
+
+msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b>."
+msgstr "По правому щелчку на ссылке доступны <b>Открыть ссылку</b> и <b>Копировать адрес ссылки</b>."
+
+msgid "Same for all sides"
+msgstr "Одинаково со всех сторон"
+
+msgid "Save before continuing?"
+msgstr "Сохранить перед продолжением?"
+
+msgid "Saved"
+msgstr "Сохранено"
+
+msgid "Scale mode"
+msgstr "Режим масштабирования"
+
+msgid "Select All"
+msgstr "Выделить всё"
+
+msgid "Selecting and copying text"
+msgstr "Выделение и копирование текста"
+
+msgid "Settings are stored by Qt in the per-user location for this platform; on Windows that is the registry under <code>HKEY_CURRENT_USER\\Software\\pdfarranger</code>. There is no configuration file to edit by hand."
+msgstr "Настройки хранятся средствами Qt в пользовательском расположении для этой платформы; в Windows это реестр, ветвь <code>HKEY_CURRENT_USER\\Software\\pdfarranger</code>. Файла конфигурации, который нужно править вручную, нет."
+
+msgid "Split Booklet"
+msgstr "Разделить буклет"
+
+msgid "Style"
+msgstr "Стиль"
+
+msgid "Swap Odd/Even"
+msgstr "Поменять чётные и нечётные"
+
+msgid "The application opens in <b>read mode</b>: a continuous page view for reading the document rather than rearranging it. <b>View ▸ Arrange Mode</b> (Ctrl+E) swaps to the thumbnail grid and back."
+msgstr "Приложение открывается в <b>режиме чтения</b>: это непрерывный просмотр страниц для чтения документа, а не для его перестройки. <b>Вид ▸ Режим расположения</b> (Ctrl+E) переключает на сетку миниатюр и обратно."
+
+msgid "The document will be encrypted when it is saved."
+msgstr "При сохранении документ будет зашифрован."
+
+msgid "The document will not be encrypted."
+msgstr "Документ не будет зашифрован."
+
+msgid "The page has no image."
+msgstr "На странице нет изображения."
+
+msgid "The page has no text."
+msgstr "На странице нет текста."
+
+msgid "The page you are on follows you between the two modes. Switching to read mode opens at the page selected in the grid, the first of them if several are selected; switching back scrolls the grid to the page you were reading, without disturbing what you had selected. With nothing selected, reading resumes where you left off — your place in each document is remembered between visits."
+msgstr "Текущая страница следует за вами при переключении режимов. Переход в режим чтения открывает страницу, выделенную в сетке, — первую из них, если выделено несколько; обратное переключение прокручивает сетку к странице, которую вы читали, не трогая выделение. Если ничего не выделено, чтение продолжается с того места, где вы остановились: место в каждом документе запоминается между сеансами."
+
+msgid "The passwords do not match."
+msgstr "Пароли не совпадают."
+
+msgid "The printer driver is processing the job."
+msgstr "Драйвер принтера обрабатывает задание."
+
+msgid "The sidebar shows the document's bookmarks. Click one to jump to it. Everything below is on the sidebar's right-click menu, and every command can be undone."
+msgstr "На боковой панели показаны закладки документа. Щёлкните по закладке, чтобы перейти к ней. Всё, что описано ниже, есть в контекстном меню панели, и любую команду можно отменить."
+
+msgid "The toolbar shows which page you are on and how many there are; type a number into it to jump there, or use <b>Ctrl+G</b>."
+msgstr "На панели инструментов видно, на какой вы странице и сколько их всего; введите туда номер, чтобы перейти к нужной странице, или нажмите <b>Ctrl+G</b>."
+
+msgid "There is nothing to save."
+msgstr "Нечего сохранять."
+
+msgid "This bookmark does not point at a page"
+msgstr "Эта закладка не указывает на страницу"
+
+msgid "This bookmark's page is no longer in the document"
+msgstr "Страницы этой закладки больше нет в документе"
+
+msgid "This document cannot be read."
+msgstr "Этот документ невозможно прочитать."
+
+msgid "This document has unsaved changes."
+msgstr "В документе есть несохранённые изменения."
+
+msgid "This file is no longer there:"
+msgstr "Этого файла больше нет:"
+
+msgid "To move pages a long way, use <b>Move to Start</b>, <b>Move to End</b> or <b>Move to Page…</b> rather than dragging — in a long document the far end is a great deal of scrolling away. They are on the Edit menu and on the right-click menu, and <b>Move to Page…</b> asks for the number the page should <i>become</i>."
+msgstr "Чтобы переместить страницы далеко, используйте <b>Переместить в начало</b>, <b>Переместить в конец</b> или <b>Переместить на страницу…</b>, а не перетаскивание: в длинном документе до другого конца очень далеко прокручивать. Они есть в меню «Правка» и в контекстном меню, а <b>Переместить на страницу…</b> спрашивает номер, которым страница должна <i>стать</i>."
+
+msgid "Unsupported security scheme"
+msgstr "Неподдерживаемая схема безопасности"
+
+msgid "User Guide"
+msgstr "Руководство пользователя"
+
+msgid "When checked: use document properties from the first file opened."
+msgstr "Если отмечено: использовать свойства документа из первого открытого файла."
+
+msgid "When unchecked: merge bookmarks from all documents."
+msgstr "Если не отмечено: объединять закладки из всех документов."
+
+msgid "With pages selected, all three fit the selection rather than the whole document."
+msgstr "Если страницы выделены, все три команды подгоняют выделение, а не весь документ."
+
+msgid "_Duplicate"
+msgstr "_Дублировать"
+
+msgid "_File"
+msgstr "_Файл"
+
+msgid "_Help"
+msgstr "_Справка"
+
+msgid "_Page"
+msgstr "С_траница"
+
+msgid "_Reset Zoom"
+msgstr "С_бросить масштаб"
+
+msgid "cursor to the start / end of the document"
+msgstr "курсор в начало / конец документа"
+
+msgid "cursor to the start / end of the line"
+msgstr "курсор в начало / конец строки"
+
+msgid "extend the selection one word"
+msgstr "расширить выделение на слово"
+
+msgid "extend the selection, by character or line"
+msgstr "расширить выделение по символам или строкам"
+
+msgid "move the text cursor one word"
+msgstr "переместить текстовый курсор на слово"
+
+msgid "move the text cursor, by character or line"
+msgstr "переместить текстовый курсор по символам или строкам"
+
+msgid "of {}"
+msgstr "из {}"
+
+msgid "previous / next page"
+msgstr "предыдущая / следующая страница"
+
+msgid "scroll one line"
+msgstr "прокрутка на строку"
+
+msgid "scroll one screen"
+msgstr "прокрутка на экран"
+
+msgid "start / end of the document"
+msgstr "начало / конец документа"
+
+msgid "top of the previous / next page"
+msgstr "к началу предыдущей / следующей страницы"
+
+msgid "%d image written"
+msgid_plural "%d images written"
+msgstr[0] "%d изображение записано"
+msgstr[1] "%d изображения записано"
+msgstr[2] "%d изображений записано"
+
+msgid "%d page"
+msgid_plural "%d pages"
+msgstr[0] "%d страница"
+msgstr[1] "%d страницы"
+msgstr[2] "%d страниц"
+
+msgid "%d page matches"
+msgid_plural "%d pages match"
+msgstr[0] "%d страница совпадает"
+msgstr[1] "%d страницы совпадают"
+msgstr[2] "%d страниц совпадают"
+
+msgid "%d page printed"
+msgid_plural "%d pages printed"
+msgstr[0] "%d страница напечатана"
+msgstr[1] "%d страницы напечатано"
+msgstr[2] "%d страниц напечатано"
+
+msgid "%d page selected"
+msgid_plural "%d pages selected"
+msgstr[0] "%d страница выделена"
+msgstr[1] "%d страницы выделено"
+msgstr[2] "%d страниц выделено"
+
+msgid "_Undo %s"
+msgstr "О_тменить: %s"
+
+msgid "_Redo %s"
+msgstr "_Повторить: %s"
+
+msgid "Untitled"
+msgstr "Без названия"
+
+msgid "Duplicate"
+msgstr "Дублировать"
+
+msgid "Rotate"
+msgstr "Повернуть"
+
+msgid "System"
+msgstr "Системная"
+
+msgid "Light"
+msgstr "Светлая"
+
+msgid "Dark"
+msgstr "Тёмная"
