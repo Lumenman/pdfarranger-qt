@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pdfarranger main\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-04-24 21:19+0300\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language: tr\n"
@@ -991,9 +991,24 @@ msgstr ""
 "Kopyala</b> seçeneklerini sunar."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Yer imleri"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Görünüm ▸ Yer imleri</b> (F4) ve okuma araç çubuğundaki düğme paneli "
+"gösterir ve gizler. Yer imi olan bir belgede kendiliğinden görünür, hiç "
+"olmayan bir belgede ise yoldan çekilir — yenilerini oluşturmaya başlamak "
+"için orada açın. Yanındaki ayırıcıyı sürükleyerek paneli genişletebilir veya"
+" daraltabilirsiniz; genişlik hatırlanır."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1776,6 +1791,11 @@ msgstr "Düzenleme Kipi"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Karşılıklı Sayfalar"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Yer imleri panelini göster veya gizle"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

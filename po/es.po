@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-04-03 11:36-0300\n"
 "Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
 "Language: es\n"
@@ -1004,9 +1004,24 @@ msgstr ""
 "<b>Copiar dirección del enlace</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Marcadores"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Ver ▸ Marcadores</b> (F4), y el botón de la barra de herramientas de "
+"lectura, muestran y ocultan el panel. Aparece por sí solo en un documento "
+"que tiene marcadores y se mantiene apartado en uno que no tiene ninguno: "
+"ábralo ahí para empezar a crearlos. Arrastre el divisor contiguo para hacer "
+"el panel más ancho o más estrecho; la anchura se recuerda."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1797,6 +1812,11 @@ msgstr "Modo de organización"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Páginas enfrentadas"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Mostrar u ocultar el panel de marcadores"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

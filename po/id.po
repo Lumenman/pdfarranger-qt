@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2023-06-08 10:00+0700\n"
 "Last-Translator: Abdul Munif Hanafi <amunifhanafi@gmail.com>\n"
 "Language: id\n"
@@ -1023,9 +1023,24 @@ msgstr ""
 "Alamat Tautan</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Penanda"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Lihat ▸ Penanda</b> (F4), dan tombol pada bilah alat baca, menampilkan "
+"dan menyembunyikan panel. Panel muncul sendiri pada dokumen yang memiliki "
+"penanda dan tidak mengganggu pada dokumen yang tidak memilikinya — buka di "
+"sana untuk mulai membuatnya. Seret pembatas di sebelahnya untuk melebarkan "
+"atau menyempitkan panel; lebarnya diingat."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1837,6 +1852,11 @@ msgstr "Mode Penataan"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Halaman Berhadapan"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Tampilkan atau sembunyikan panel penanda"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

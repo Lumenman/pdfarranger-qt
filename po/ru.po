@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pdfarranger master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-09-04 09:59+0000\n"
 "Last-Translator: Lumenman <28367232+Lumenman@users.noreply.github.com>\n"
 "Language: ru\n"
@@ -930,9 +930,24 @@ msgstr ""
 "По правому щелчку на ссылке доступны <b>Открыть ссылку</b> и <b>Копировать "
 "адрес ссылки</b>."
 
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Закладки"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Вид ▸ Закладки</b> (F4) и кнопка на панели инструментов чтения показывают"
+" и скрывают панель. В документе с закладками она появляется сама, а в "
+"документе без них не мешается — откройте её там, чтобы начать их создавать. "
+"Перетащите разделитель рядом, чтобы сделать панель шире или уже; ширина "
+"запоминается."
 
 #: pdfarranger_qt/dialogs.py
 msgid ""
@@ -1673,6 +1688,11 @@ msgstr "Режим расположения"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Разворот"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Показать или скрыть панель закладок"
 
 #: pdfarranger_qt/mainwindow.py
 msgid "Continuous Scroll"

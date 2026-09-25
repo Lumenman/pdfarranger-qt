@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PDF-Shuffler 0.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2021-12-30 17:13+0100\n"
 "Last-Translator: Toratora <darex7@o2.pl>\n"
 "Language: pl_PL\n"
@@ -1032,9 +1032,24 @@ msgstr ""
 "<b>Kopiuj adres odnośnika</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Zakładki"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Widok ▸ Zakładki</b> (F4) oraz przycisk na pasku narzędzi czytania "
+"pokazują i ukrywają panel. Pojawia się sam w dokumencie, który ma zakładki, "
+"i nie zawadza w dokumencie, który ich nie ma — otwórz go tam, aby zacząć je "
+"tworzyć. Przeciągnij sąsiedni separator, aby poszerzyć lub zwęzić panel; "
+"szerokość jest zapamiętywana."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1851,6 +1866,11 @@ msgstr "Tryb porządkowania"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Sąsiadujące strony"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Pokaż lub ukryj panel zakładek"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

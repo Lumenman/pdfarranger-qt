@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2023-06-06 13:27+0200\n"
 "Last-Translator: Janez G <janezgac@gmail.com>\n"
 "Language: sl_SI\n"
@@ -1008,9 +1008,24 @@ msgstr ""
 "povezave</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Zaznamki"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Pogled ▸ Zaznamki</b> (F4) in gumb v bralni orodni vrstici prikažeta in "
+"skrijeta ploščo. Pri dokumentu z zaznamki se pojavi sama, pri dokumentu brez"
+" njih pa ostane ob strani — tam jo odprite, da jih začnete ustvarjati. "
+"Povlecite ločilnik ob njej, da ploščo razširite ali zožite; širina se "
+"zapomni."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1800,6 +1815,11 @@ msgstr "Način razporejanja"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Dvojna stran"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Pokaži ali skrij ploščo zaznamkov"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

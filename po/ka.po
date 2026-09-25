@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-01-21 05:07+0100\n"
 "Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language: ka\n"
@@ -992,9 +992,24 @@ msgstr ""
 "მისამართის კოპირებას</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "სანიშნეები"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>ხედი ▸ სანიშნეები</b> (F4) და კითხვის ხელსაწყოთა ზოლის ღილაკი აჩვენებს და"
+" მალავს პანელს. ის თავისით ჩნდება დოკუმენტში, რომელსაც სანიშნეები აქვს, და "
+"გზიდან ეცლება იმას, რომელსაც არ აქვს — გახსენით იქ, რომ დაიწყოთ მათი შექმნა."
+" გადაათრიეთ გვერდით მდებარე გამყოფი პანელის გასაგანიერებლად ან "
+"შესავიწროებლად; სიგანე იმახსოვრება."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1784,6 +1799,11 @@ msgstr "დალაგების რეჟიმი"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "მოპირდაპირე გვერდები"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "სანიშნეების პანელის ჩვენება ან დამალვა"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

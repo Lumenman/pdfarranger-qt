@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2023-10-22 00:28+0200\n"
 "Last-Translator: Lrss <dev@lrss.dk>\n"
 "Language: da\n"
@@ -1012,9 +1012,24 @@ msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b
 msgstr "Højreklik på et link giver <b>Åbn link</b> og <b>Kopiér linkadresse</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Bogmærker"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Visning ▸ Bogmærker</b> (F4) og knappen på læseværktøjslinjen viser og "
+"skjuler panelet. Det vises af sig selv for et dokument med bogmærker og "
+"holder sig væk for et uden — åbn det der for at begynde at oprette nogle. "
+"Træk i skillelinjen ved siden af for at gøre panelet bredere eller smallere;"
+" bredden huskes."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1813,6 +1828,11 @@ msgstr "Ordningstilstand"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Opslag"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Vis eller skjul bogmærkepanelet"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

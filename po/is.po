@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2025-09-28 16:51+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language: is\n"
@@ -999,9 +999,24 @@ msgstr ""
 "tengils</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Bókamerki"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Skoða ▸ Bókamerki</b> (F4) og hnappurinn á lestrarslánni sýna og fela "
+"spjaldið. Það birtist af sjálfu sér í skjali sem hefur bókamerki og heldur "
+"sig til hlés í skjali sem hefur engin — opnaðu það þar til að byrja að búa "
+"þau til. Dragðu skilrúmið við hliðina til að gera spjaldið breiðara eða "
+"mjórra; breiddin er munuð."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1795,6 +1810,11 @@ msgstr "Röðunarhamur"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Síður hlið við hlið"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Sýna eða fela bókamerkjaspjaldið"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

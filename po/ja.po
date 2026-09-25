@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2022-09-01 00:40+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language: ja\n"
@@ -981,9 +981,21 @@ msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b
 msgstr "リンクを右クリックすると<b>リンクを開く</b>と<b>リンクのアドレスをコピー</b>が出ます。"
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "しおり"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>表示 ▸ "
+"しおり</b>（F4）と読書ツールバーのボタンで、パネルの表示と非表示を切り替えます。しおりのある文書では自動的に表示され、ない文書では邪魔にならないよう隠れています。しおりを作り始めるときは、そこで開いてください。隣の仕切りをドラッグするとパネルの幅を変えられます。幅は記憶されます。"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1720,6 +1732,11 @@ msgstr "並べ替えモード"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "見開き"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "しおりパネルの表示・非表示"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

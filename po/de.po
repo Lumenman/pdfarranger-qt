@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2025-07-09 08:35+0200\n"
 "Last-Translator: Sebastian Scherch\n"
 "Language: de\n"
@@ -1010,9 +1010,24 @@ msgstr ""
 "kopieren</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Lesezeichen"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Ansicht ▸ Lesezeichen</b> (F4) und die Schaltfläche in der Lese-"
+"Werkzeugleiste blenden die Leiste ein und aus. Bei einem Dokument mit "
+"Lesezeichen erscheint sie von selbst, bei einem ohne bleibt sie aus dem Weg "
+"— öffnen Sie sie dort, um welche anzulegen. Ziehen Sie den Trenner daneben, "
+"um die Leiste breiter oder schmaler zu machen; die Breite wird gemerkt."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1813,6 +1828,11 @@ msgstr "Anordnungsmodus"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Gegenüberliegende Seiten"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Lesezeichenleiste ein- oder ausblenden"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

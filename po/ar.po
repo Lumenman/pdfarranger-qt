@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2024-09-05 17:05+0300\n"
 "Last-Translator: Abdullah Albaroty <albaroty@gmail.com>\n"
 "Language: ar\n"
@@ -996,9 +996,23 @@ msgstr ""
 "الرابط</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "العلامات"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>عرض ▸ العلامات</b> (F4)، والزر الموجود في شريط أدوات القراءة، يُظهران "
+"اللوحة ويُخفيانها. تظهر تلقائيًا في مستند يحتوي على علامات، وتبقى بعيدة عن "
+"الطريق في مستند لا يحتوي على أي منها — افتحها هناك لبدء إنشائها. اسحب الفاصل"
+" المجاور لها لجعل اللوحة أعرض أو أضيق؛ ويُحفَظ العرض."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1770,6 +1784,11 @@ msgstr "نمط الترتيب"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "صفحات متقابلة"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "إظهار لوحة العلامات أو إخفاؤها"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

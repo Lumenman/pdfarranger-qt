@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-05-24 07:36+0300\n"
 "Last-Translator: kbengs\n"
 "Language: sv\n"
@@ -988,9 +988,24 @@ msgstr ""
 "länkadress</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Bokmärken"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Visa ▸ Bokmärken</b> (F4) och knappen i läsverktygsfältet visar och "
+"döljer panelen. Den dyker upp av sig själv för ett dokument som har "
+"bokmärken och håller sig undan för ett som saknar dem — öppna den där för "
+"att börja skapa några. Dra avdelaren bredvid för att göra panelen bredare "
+"eller smalare; bredden sparas."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1777,6 +1792,11 @@ msgstr "Ordningsläge"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Uppslag"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Visa eller dölj bokmärkespanelen"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

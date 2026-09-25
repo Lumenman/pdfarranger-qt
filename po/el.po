@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PDF Arranger 1.9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2023-06-12 10:30+0300\n"
 "Last-Translator: Manussos Pulinakis "
 "<38626261+manussos@users.noreply.github.com>\n"
@@ -1033,9 +1033,25 @@ msgstr ""
 "<b>Αντιγραφή διεύθυνσης συνδέσμου</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Σελιδοδείκτες"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Προβολή ▸ Σελιδοδείκτες</b> (F4), και το κουμπί στη γραμμή εργαλείων "
+"ανάγνωσης, εμφανίζουν και αποκρύπτουν τον πίνακα. Εμφανίζεται από μόνος του "
+"σε έγγραφο που έχει σελιδοδείκτες και παραμένει στην άκρη σε έγγραφο χωρίς "
+"κανέναν — ανοίξτε τον εκεί για να αρχίσετε να δημιουργείτε. Σύρετε τον "
+"διαχωριστή δίπλα του για να τον κάνετε πλατύτερο ή στενότερο· το πλάτος "
+"απομνημονεύεται."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1852,6 +1868,11 @@ msgstr "Λειτουργία τακτοποίησης"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Αντικριστές σελίδες"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Εμφάνιση ή απόκρυψη του πίνακα σελιδοδεικτών"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

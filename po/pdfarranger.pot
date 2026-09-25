@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pdfarranger-qt VERSION\n"
 "Report-Msgid-Bugs-To: https://github.com/dwsdolce/pdfarranger-qt/issues\n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -791,8 +791,17 @@ msgstr ""
 msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b>."
 msgstr ""
 
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
+msgstr ""
+
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
 msgstr ""
 
 #: pdfarranger_qt/dialogs.py
@@ -1399,6 +1408,10 @@ msgstr ""
 
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
+msgstr ""
+
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
 msgstr ""
 
 #: pdfarranger_qt/mainwindow.py

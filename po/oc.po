@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-02-15 15:16+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language: oc\n"
@@ -999,9 +999,24 @@ msgstr ""
 "l'adreça del ligam</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Marcapaginas"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Afichatge ▸ Marcapaginas</b> (F4), e lo boton de la barra d'aisinas de "
+"lectura, mòstran e amagan lo panèl. Apareis tot sol per un document qu'a de "
+"marcapaginas e demòra a despart per un que n'a pas cap — dobrissètz-lo aquí "
+"per començar de ne crear. Lisatz lo separador a costat per far lo panèl mai "
+"larg o mai estreit ; la largor es memorizada."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1793,6 +1808,11 @@ msgstr "Mòde d'ordenament"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Paginas en fàcia"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Afichar o amagar lo panèl dels marcapaginas"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

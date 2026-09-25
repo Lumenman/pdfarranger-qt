@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PDF Arranger 1.14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-06-02 17:09+0800\n"
 "Last-Translator: Puqns67 <me@puqns67.icu>\n"
 "Language: zh_CN\n"
@@ -938,9 +938,21 @@ msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b
 msgstr "右键单击链接会提供<b>打开链接</b>和<b>复制链接地址</b>。"
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "书签"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>查看 ▸ "
+"书签</b>（F4）以及阅读工具栏上的按钮可以显示和隐藏该面板。对于含有书签的文档，它会自动出现；对于没有书签的文档，它不会占用空间——需要新建书签时可在那里打开。拖动旁边的分隔条可以调整面板宽窄；宽度会被记住。"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1644,6 +1656,11 @@ msgstr "整理模式"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "对开页"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "显示或隐藏书签面板"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

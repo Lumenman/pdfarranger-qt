@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2022-10-03 23:44+0200\n"
 "Last-Translator: Ícar N. S. <icar.nin@protonmail.com>\n"
 "Language: ca\n"
@@ -1027,9 +1027,24 @@ msgstr ""
 "de l'enllaç</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Adreces d'interès"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Visualitza ▸ Adreces d'interès</b> (F4), i el botó de la barra d'eines de"
+" lectura, mostren i amaguen el plafó. Apareix tot sol en un document que té "
+"adreces d'interès i es manté apartat en un que no en té cap: obriu-lo allà "
+"per començar a crear-ne. Arrossegueu el divisor del costat per fer el plafó "
+"més ample o més estret; l'amplada es recorda."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1841,6 +1856,11 @@ msgstr "Mode d'ordenació"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Pàgines encarades"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Mostra o amaga el plafó d'adreces d'interès"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

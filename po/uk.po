@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unnamed project\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-05-27 19:30+0300\n"
 "Last-Translator: Dymko <Dymkovych@proton.me>\n"
 "Language: uk\n"
@@ -997,9 +997,24 @@ msgstr ""
 "<b>Копіювати адресу посилання</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Закладки"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Перегляд ▸ Закладки</b> (F4) і кнопка на панелі інструментів читання "
+"показують і ховають панель. У документі із закладками вона з’являється сама,"
+" а в документі без них не заважає — відкрийте її там, щоб почати їх "
+"створювати. Перетягніть роздільник поруч, щоб зробити панель ширшою або "
+"вужчою; ширина запам’ятовується."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1786,6 +1801,11 @@ msgstr "Режим упорядкування"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Розворот"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Показати або сховати панель закладок"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

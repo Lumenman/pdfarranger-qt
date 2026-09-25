@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: hu\n"
@@ -1018,9 +1018,24 @@ msgstr ""
 "<b>Hivatkozás címének másolása</b> jelenik meg."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Könyvjelzők"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Nézet ▸ Könyvjelzők</b> (F4) és az olvasó eszköztár gombja megjeleníti és"
+" elrejti a panelt. Könyvjelzőket tartalmazó dokumentumnál magától "
+"megjelenik, olyannál pedig, amelyikben nincs, félreáll — ott nyissa meg, ha "
+"létre szeretne hozni néhányat. Húzza a mellette lévő elválasztót, hogy a "
+"panel szélesebb vagy keskenyebb legyen; a szélesség megjegyződik."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1826,6 +1841,11 @@ msgstr "Rendezési mód"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Szemben lévő oldalak"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "A könyvjelzőpanel megjelenítése vagy elrejtése"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

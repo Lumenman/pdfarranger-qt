@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2025-12-15 00:59+0700\n"
 "Last-Translator: Loc Huynh <https://github.com/hthienloc>\n"
 "Language: vi\n"
@@ -993,9 +993,23 @@ msgstr ""
 "liên kết</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Dấu trang"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Xem ▸ Dấu trang</b> (F4) và nút trên thanh công cụ đọc sẽ hiện và ẩn "
+"bảng. Bảng tự xuất hiện với tài liệu có dấu trang và không choán chỗ với tài"
+" liệu không có — hãy mở nó ở đó để bắt đầu tạo. Kéo thanh phân cách bên cạnh"
+" để làm bảng rộng hơn hoặc hẹp hơn; độ rộng được ghi nhớ."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1783,6 +1797,11 @@ msgstr "Chế độ sắp xếp"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Trang đối diện"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Hiện hoặc ẩn bảng dấu trang"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

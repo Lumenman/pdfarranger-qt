@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  pdfarranger\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2024-03-24 19:16+0200\n"
 "Last-Translator: \n"
 "Language: fi\n"
@@ -1011,9 +1011,24 @@ msgstr ""
 "linkki</b> ja <b>Kopioi linkin osoite</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "Kirjanmerkit"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>Näytä ▸ Kirjanmerkit</b> (F4) ja lukupalkin painike näyttävät ja "
+"piilottavat paneelin. Se ilmestyy itsestään asiakirjaan, jossa on "
+"kirjanmerkkejä, ja pysyy poissa tieltä asiakirjassa, jossa niitä ei ole — "
+"avaa se siellä, kun haluat luoda niitä. Vedä viereistä jakajaa tehdäksesi "
+"paneelista leveämmän tai kapeamman; leveys muistetaan."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1818,6 +1833,11 @@ msgstr "Järjestelytila"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "Aukeama"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "Näytä tai piilota kirjanmerkkipaneeli"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

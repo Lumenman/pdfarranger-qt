@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pdfarranger - Korean\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2026-05-25 00:41+0900\n"
 "Last-Translator: VenusGirl <venusgirl@outlook.com>\n"
 "Language: ko\n"
@@ -950,9 +950,22 @@ msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b
 msgstr "링크를 오른쪽 클릭하면 <b>링크 열기</b>와 <b>링크 주소 복사</b>가 나옵니다."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "책갈피"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>보기 ▸ 책갈피</b>(F4)와 읽기 도구 모음의 단추로 패널을 표시하거나 숨깁니다. 책갈피가 있는 문서에서는 저절로 나타나고, "
+"없는 문서에서는 비켜서 있습니다. 책갈피를 만들려면 거기서 여십시오. 옆의 구분선을 끌어 패널을 넓히거나 좁힐 수 있으며, 너비는 "
+"기억됩니다."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1690,6 +1703,11 @@ msgstr "정리 모드"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "맞쪽 보기"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "책갈피 패널 표시 또는 숨기기"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py

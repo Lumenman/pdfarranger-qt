@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 20:38+0000\n"
+"POT-Creation-Date: 2026-09-25 23:34+0000\n"
 "PO-Revision-Date: 2023-06-12 11:22+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language: he\n"
@@ -996,9 +996,23 @@ msgid "Right-clicking a link offers <b>Open Link</b> and <b>Copy Link Address</b
 msgstr "לחיצה ימנית על קישור מציעה <b>פתיחת קישור</b> ו<b>העתקת כתובת הקישור</b>."
 
 # machine translation, unreviewed
-#: pdfarranger_qt/dialogs.py
+#: pdfarranger_qt/dialogs.py pdfarranger_qt/mainwindow.py
 msgid "Bookmarks"
 msgstr "סימניות"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/dialogs.py
+msgid ""
+"<b>View ▸ Bookmarks</b> (F4), and the button on the reading toolbar, show "
+"and hide the panel. It appears by itself for a document that has bookmarks "
+"and stays out of the way for one that has none — open it there to start "
+"making some. Drag the divider beside it to make the panel wider or narrower;"
+" the width is remembered."
+msgstr ""
+"<b>תצוגה ▸ סימניות</b> (F4), והלחצן בסרגל הכלים של הקריאה, מציגים ומסתירים "
+"את החלונית. היא מופיעה מעצמה במסמך שיש בו סימניות ונשארת בצד במסמך שאין בו —"
+" פתחו אותה שם כדי להתחיל ליצור. גררו את המפריד שלצדה כדי להרחיב או לצמצם את "
+"החלונית; הרוחב נשמר."
 
 # machine translation, unreviewed
 #: pdfarranger_qt/dialogs.py
@@ -1775,6 +1789,11 @@ msgstr "מצב סידור"
 #: pdfarranger_qt/mainwindow.py
 msgid "Facing Pages"
 msgstr "עמודים זה מול זה"
+
+# machine translation, unreviewed
+#: pdfarranger_qt/mainwindow.py
+msgid "Show or hide the bookmarks panel"
+msgstr "הצגה או הסתרה של חלונית הסימניות"
 
 # machine translation, unreviewed
 #: pdfarranger_qt/mainwindow.py
