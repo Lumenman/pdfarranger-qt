@@ -1400,6 +1400,12 @@ def help_sections():
               "Address</b>."),
         ]),
         (_("Bookmarks"), [
+            _("<b>View ▸ Bookmarks</b> (F4), and the button on the reading "
+              "toolbar, show and hide the panel. It appears by itself for a "
+              "document that has bookmarks and stays out of the way for one "
+              "that has none — open it there to start making some. Drag the "
+              "divider beside it to make the panel wider or narrower; the "
+              "width is remembered."),
             _("The sidebar shows the document's bookmarks. Click one to jump "
               "to it. Everything below is on the sidebar's right-click menu, "
               "and every command can be undone."),

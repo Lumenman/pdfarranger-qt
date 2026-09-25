@@ -1257,3 +1257,139 @@ class TestFacingPagesCommand(unittest.TestCase):
         self.win.set_arrange_mode(False)
         settle(timeout_ms=500)
         self.assertTrue(self.win.reader.facing())
+
+
+class TestBookmarkPanel(unittest.TestCase):
+    """Showing and hiding the bookmarks, and the splitter beside them.
+
+    David's requirements: the control must be obvious rather than buried in a
+    menu, the panel may stay out of the way for a document with no bookmarks,
+    and it must still be easy to open there -- because making bookmarks in a
+    document that has none is a real thing to want to do.
+    """
+
+    WITH_BOOKMARKS = os.path.join(HERE, "exporter", "outlines.pdf")
+    WITHOUT = os.path.join(HERE, "test.pdf")
+
+    def setUp(self):
+        from pdfarranger_qt.mainwindow import MainWindow
+
+        self.win = MainWindow()
+        self.addCleanup(self.win.close)
+        self.addCleanup(setattr, self.win, "modified", False)
+        self.win.resize(1000, 700)
+        self.win.show()
+        settle(timeout_ms=200)
+
+    def open(self, path):
+        self.win.open_paths([path])
+        settle(timeout_ms=400)
+        self.win.modified = False
+
+    def visible(self):
+        return self.win.reader.outline_visible()
+
+    # -- the rule ----------------------------------------------------------
+
+    def test_a_document_with_bookmarks_shows_the_panel(self):
+        self.open(self.WITH_BOOKMARKS)
+        self.assertTrue(self.visible())
+        self.assertTrue(self.win.act_bookmarks.isChecked())
+
+    def test_a_document_without_them_does_not(self):
+        self.open(self.WITHOUT)
+        self.assertFalse(self.visible())
+        self.assertFalse(self.win.act_bookmarks.isChecked())
+
+    def test_it_can_be_opened_for_a_document_with_none(self):
+        """The case that matters: starting to make bookmarks."""
+        self.open(self.WITHOUT)
+        self.win.set_bookmarks_visible(True)
+        self.assertTrue(self.visible())
+        self.assertTrue(self.win.act_bookmarks.isChecked())
+
+    def test_asking_for_it_does_not_follow_to_the_next_document(self):
+        """The panel follows the document; asking is for the one in front of you."""
+        self.open(self.WITHOUT)
+        self.win.set_bookmarks_visible(True)
+        self.open(self.WITHOUT)
+        self.assertFalse(self.visible())
+
+    def test_asking_for_it_is_not_a_change_of_preference(self):
+        self.open(self.WITHOUT)
+        self.win.set_bookmarks_visible(True)
+        self.open(self.WITH_BOOKMARKS)
+        self.assertTrue(self.visible(), "turning it off was inferred from an "
+                                        "empty document")
+
+    def test_turning_it_off_is_remembered(self):
+        self.open(self.WITH_BOOKMARKS)
+        self.win.set_bookmarks_visible(False)
+        self.open(self.WITH_BOOKMARKS)
+        self.assertFalse(self.visible())
+
+    def test_closing_the_document_puts_it_away(self):
+        self.open(self.WITH_BOOKMARKS)
+        self.assertTrue(self.visible())
+        self.win.close_document()
+        settle(timeout_ms=200)
+        self.assertFalse(self.visible())
+
+    # -- the control -------------------------------------------------------
+
+    def test_the_control_is_on_the_toolbar_not_only_in_a_menu(self):
+        self.assertIn(self.win.act_bookmarks,
+                      self.win.reader_toolbar.actions())
+
+    def test_it_is_in_the_view_menu_too(self):
+        """So it is rebindable: the shortcut editor walks the menu bar."""
+        found = any(self.win.act_bookmarks in menu.menu().actions()
+                    for menu in self.win.menuBar().actions() if menu.menu())
+        self.assertTrue(found)
+
+    def test_it_has_a_shortcut(self):
+        self.assertFalse(self.win.act_bookmarks.shortcut().isEmpty())
+
+    # -- the splitter ------------------------------------------------------
+
+    def test_the_handle_is_drawn_rather_than_invisible(self):
+        """It was always draggable; nothing showed you where to grab."""
+        from pdfarranger_qt.reader import _VisibleHandle
+
+        handle = self.win.reader.splitter.handle(1)
+        self.assertIsInstance(handle, _VisibleHandle)
+        self.assertGreater(handle.width(), 0)
+
+    def test_the_panel_cannot_be_dragged_away_to_nothing(self):
+        """There is a toggle for closing it; a sliver just looks broken."""
+        splitter = self.win.reader.splitter
+        self.assertFalse(splitter.childrenCollapsible())
+        self.open(self.WITH_BOOKMARKS)
+        splitter.setSizes([0, 1000])
+        settle(timeout_ms=100)
+        self.assertGreaterEqual(splitter.sizes()[0],
+                                self.win.reader.OUTLINE_MINIMUM)
+
+    def test_hiding_and_showing_keeps_the_width(self):
+        """A hidden pane is given no size, so it would come back at zero."""
+        self.open(self.WITH_BOOKMARKS)
+        self.win.reader.set_outline_width(320)
+        settle(timeout_ms=100)
+        self.win.set_bookmarks_visible(False)
+        self.win.set_bookmarks_visible(True)
+        settle(timeout_ms=100)
+        self.assertGreaterEqual(self.win.reader.outline_width(), 300)
+
+    def test_the_width_is_remembered_between_sessions(self):
+        from pdfarranger_qt.mainwindow import MainWindow
+
+        self.open(self.WITH_BOOKMARKS)
+        self.win.reader.set_outline_width(288)
+        settle(timeout_ms=100)
+        self.win.modified = False
+        self.win.close()
+
+        second = MainWindow()
+        self.addCleanup(second.close)
+        self.addCleanup(setattr, second, "modified", False)
+        self.assertEqual(second.reader.outline_width(), 288)

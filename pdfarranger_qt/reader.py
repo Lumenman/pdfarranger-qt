@@ -34,13 +34,16 @@ import logging
 from typing import List, Optional
 
 from PySide6.QtCore import QAbstractItemModel, QModelIndex, Qt, Signal
-from PySide6.QtGui import QBrush, QColor, QDesktopServices, QFont
+from PySide6.QtGui import (
+    QBrush, QColor, QDesktopServices, QFont, QPainter, QPalette,
+)
 from PySide6.QtPdf import QPdfSearchModel
 from PySide6.QtPdfWidgets import QPdfPageSelector
 from PySide6.QtWidgets import (
     QColorDialog,
     QMenu,
     QSplitter,
+    QSplitterHandle,
     QTreeView,
     QVBoxLayout,
     QWidget,
@@ -51,6 +54,35 @@ from .export import get_in_memory_pdf
 from .i18n import gettext_ as _
 from .outline import BOLD, ITALIC, Outline
 from .render import MemoryDocument
+
+
+class SplitterWithAVisibleHandle(QSplitter):
+    """A splitter whose handle can be seen, and therefore found.
+
+    The handle was always draggable -- seven pixels, enabled, and it moves.
+    What it was not was *visible*: Qt's macOS style paints nothing there, so the
+    only thing between the bookmarks and the page was a blank gap, and nothing
+    suggested grabbing it. A divider line is the universal signal, drawn from
+    the palette so it follows the light and dark themes rather than being a
+    colour of our own choosing.
+    """
+
+    def createHandle(self):
+        return _VisibleHandle(self.orientation(), self)
+
+
+class _VisibleHandle(QSplitterHandle):
+
+    def paintEvent(self, event):
+        super().paintEvent(event)
+        painter = QPainter(self)
+        painter.setPen(self.palette().color(QPalette.Mid))
+        middle = self.rect().center()
+        if self.orientation() == Qt.Horizontal:
+            painter.drawLine(middle.x(), 0, middle.x(), self.height())
+        else:
+            painter.drawLine(0, middle.y(), self.width(), middle.y())
+        painter.end()
 
 
 class ReaderView(QWidget):
@@ -67,6 +99,12 @@ class ReaderView(QWidget):
     owns the outline, the page selector and the document, and is what the window
     talks to.
     """
+
+    #: How wide the bookmark panel starts, and the least it can be dragged to.
+    #: A minimum because a panel dragged down to a sliver looks broken rather
+    #: than closed, and there is a toggle for closing it.
+    OUTLINE_DEFAULT = 220
+    OUTLINE_MINIMUM = 120
 
     #: Emitted when the visible page changes, so the window can show it.
     page_changed = Signal(int)
@@ -131,11 +169,24 @@ class ReaderView(QWidget):
         self.bookmarks.about_to_edit.connect(self.outline_edit_begun)
         self.bookmarks.edited.connect(self.outline_edited)
 
-        self.splitter = QSplitter(Qt.Horizontal, self)
+        self.splitter = SplitterWithAVisibleHandle(Qt.Horizontal, self)
         self.splitter.addWidget(self.outline)
         self.splitter.addWidget(self.canvas)
         self.splitter.setStretchFactor(1, 1)
-        self.splitter.setSizes([220, 780])
+        # Not collapsible by dragging: the toggle owns whether the panel is
+        # there, and two mechanisms for one thing disagree sooner or later --
+        # drag it shut and the toggle still says it is open.
+        self.splitter.setChildrenCollapsible(False)
+        self.outline.setMinimumWidth(self.OUTLINE_MINIMUM)
+        self.splitter.setSizes([self.OUTLINE_DEFAULT, 780])
+        #: The width to give the panel back when it is shown again, and to
+        #: remember between sessions. Recorded when the handle is *moved*
+        #: rather than read from the splitter on demand: before the window has
+        #: been laid out the splitter is a few pixels wide and clamps whatever
+        #: it is asked for, so asking it would hand back that clamped value and
+        #: quietly forget the real one.
+        self._outline_width = self.OUTLINE_DEFAULT
+        self.splitter.splitterMoved.connect(self._note_outline_width)
 
         layout = QVBoxLayout(self)
         layout.setContentsMargins(0, 0, 0, 0)
@@ -329,6 +380,40 @@ class ReaderView(QWidget):
         item = self.bookmarks.bookmark(index)
         if item is not None:
             item.closed = closed
+
+    def outline_visible(self) -> bool:
+        return not self.outline.isHidden()
+
+    def set_outline_visible(self, on: bool):
+        """Show or hide the bookmark panel, keeping the width it had.
+
+        Without remembering it, a hidden pane comes back at zero and has to be
+        dragged open again -- the splitter gives a hidden widget no size at all.
+        """
+        on = bool(on)
+        if on == self.outline_visible():
+            return
+        self.outline.setVisible(on)
+        if on:
+            total = max(self.splitter.width(), self._outline_width + 1)
+            self.splitter.setSizes(
+                [self._outline_width, total - self._outline_width])
+
+    def _note_outline_width(self, position: int, _index: int):
+        """Remember where the handle was dragged to."""
+        if position >= self.OUTLINE_MINIMUM:
+            self._outline_width = position
+
+    def outline_width(self) -> int:
+        """The panel's width, for remembering between sessions."""
+        return self._outline_width
+
+    def set_outline_width(self, width: int):
+        self._outline_width = max(self.OUTLINE_MINIMUM, int(width))
+        if self.outline_visible():
+            total = max(self.splitter.width(), self._outline_width + 1)
+            self.splitter.setSizes(
+                [self._outline_width, total - self._outline_width])
 
     def has_outline(self) -> bool:
         return self.bookmarks.rowCount(QModelIndex()) > 0

@@ -118,6 +118,9 @@ class MainWindow(QMainWindow):
         # and a page edit come off one stack (D20).
         self.reader.outline_edit_begun.connect(self.model.undo.commit)
         self.reader.outline_edited.connect(self._outline_edited)
+        self.reader.set_outline_width(
+            self.settings.value("reader/outline-width",
+                                self.reader.OUTLINE_DEFAULT, type=int))
         self.reader.set_facing(
             self.settings.value("reader/facing", False, type=bool))
         self.reader.set_continuous(
@@ -126,6 +129,10 @@ class MainWindow(QMainWindow):
 
         self.current_path: Optional[str] = None
         self.modified = False
+        #: True when the panel was opened for a document that has no bookmarks.
+        #: Lasts until another document is loaded: the panel follows the
+        #: document, and this is the exception you asked for by hand.
+        self._outline_asked_for = False
         #: The files this window was opened from, resolved. See `holds`.
         self.opened_paths: set = set()
         #: Document properties, merged with the sources' own metadata on export.
@@ -579,6 +586,14 @@ class MainWindow(QMainWindow):
             self.settings.value("reader/facing", False, type=bool))
         self.act_facing.triggered.connect(self.set_facing_pages)
 
+        self.act_bookmarks = self._action("Bookmarks", mnemonic=False)
+        self.act_bookmarks.setCheckable(True)
+        self.act_bookmarks.setShortcut(QKeySequence("F4"))
+        self.act_bookmarks.setToolTip(_("Show or hide the bookmarks panel"))
+        self.act_bookmarks.setChecked(
+            self.settings.value("reader/outline", True, type=bool))
+        self.act_bookmarks.triggered.connect(self.set_bookmarks_visible)
+
         self.act_continuous = self._action("Continuous Scroll", mnemonic=False)
         self.act_continuous.setCheckable(True)
         self.act_continuous.setChecked(
@@ -769,6 +784,7 @@ class MainWindow(QMainWindow):
         m.addAction(self.act_arrange_mode)
         m.addAction(self.act_continuous)
         m.addAction(self.act_facing)
+        m.addAction(self.act_bookmarks)
         m.addAction(self.act_prev_page)
         m.addAction(self.act_next_page)
         m.addAction(self.act_first_page)
@@ -847,6 +863,12 @@ class MainWindow(QMainWindow):
         self.toolbar_page_total.setContentsMargins(4, 0, 8, 0)
         self.reader_toolbar.addWidget(self.toolbar_page_total)
         self.reader_toolbar.addAction(self.act_next_page)
+        self.reader_toolbar.addSeparator()
+        # On the toolbar as well as the View menu: creating bookmarks in a
+        # document that has none is a real thing to want to do, and a panel that
+        # only appears for documents that already have some has to be openable
+        # without hunting through a menu.
+        self.reader_toolbar.addAction(self.act_bookmarks)
         self.reader_toolbar.addSeparator()
         self.reader_toolbar.addAction(self.act_zoom_fit)
         self.reader_toolbar.addAction(self.act_zoom_fit_width)
@@ -986,7 +1008,8 @@ class MainWindow(QMainWindow):
         # Always available: switching view is not an edit, and with no document
         # both views are empty, so there is nothing to protect the user from.
         self.act_arrange_mode.setEnabled(True)
-        for act in (self.act_continuous, self.act_facing, self.act_next_page,
+        for act in (self.act_bookmarks,
+                    self.act_continuous, self.act_facing, self.act_next_page,
                     self.act_prev_page, self.act_first_page, self.act_last_page,
                     self.act_go_to_page):
             # Pages as well as the mode: read mode is now the state an empty
@@ -1229,6 +1252,10 @@ class MainWindow(QMainWindow):
                 if pdf is not None:
                     pdf.close()
         self.model.outline_changed.emit()
+        # Now that we know whether this document has any, the panel can decide
+        # whether it belongs up. Covers importing as well as opening: a file
+        # brought in may be the one that supplies the bookmarks.
+        self._show_outline_for_document()
 
     # -- recent files ------------------------------------------------------
 
@@ -1353,6 +1380,38 @@ class MainWindow(QMainWindow):
         self.settings.setValue("reader/continuous", bool(on))
         self.reader.set_continuous(bool(on))
         self.act_continuous.setChecked(bool(on))
+
+    def set_bookmarks_visible(self, on: bool):
+        """Show or hide the bookmarks panel, and remember that you want it.
+
+        The preference is what you asked for in general; whether the panel is
+        actually up also depends on the document having any (see
+        `_show_outline_for_document`). Turning it on for a document with none --
+        to start making some -- is therefore not recorded as a change of
+        preference, only as a change for this document.
+        """
+        on = bool(on)
+        self.reader.set_outline_visible(on)
+        self.act_bookmarks.setChecked(on)
+        if on and not self.reader.has_outline():
+            # Asked for on an empty document: wanted here, not everywhere.
+            self._outline_asked_for = True
+            return
+        self._outline_asked_for = False
+        self.settings.setValue("reader/outline", on)
+
+    def _show_outline_for_document(self):
+        """Decide whether the panel belongs up, now that a document has loaded.
+
+        The rule: it appears whenever the document has bookmarks and you have
+        not turned it off; with none it waits until you ask. Asking holds for
+        that document and no longer -- the panel follows the document, and the
+        preference records whether you want it at all.
+        """
+        wanted = self.settings.value("reader/outline", True, type=bool)
+        on = (wanted and self.reader.has_outline()) or self._outline_asked_for
+        self.reader.set_outline_visible(on)
+        self.act_bookmarks.setChecked(on)
 
     def set_facing_pages(self, on: bool):
         """Two pages side by side while reading, or one.
@@ -1662,6 +1721,7 @@ class MainWindow(QMainWindow):
         # is for, and the reader shows empty rather than stranding anyone now
         # that the toggle stays enabled without pages.
         self.reader.clear()
+        self._show_outline_for_document()
         self._refresh_state()
 
     def _reset_document(self):
@@ -1675,6 +1735,9 @@ class MainWindow(QMainWindow):
         self.viewer_prefs = viewer.Preferences()
         self.act_strip_metadata.setChecked(False)
         self.opened_paths = set()
+        # A new document: the panel follows it again rather than staying open
+        # because the last one was asked to show it.
+        self._outline_asked_for = False
         self.search.invalidate()
         # The outline goes with the document it came from. It is not derived
         # from the page list any more (D20), so emptying the pages does not
@@ -2891,6 +2954,7 @@ class MainWindow(QMainWindow):
         if not self._confirm_discard():
             event.ignore()
             return
+        self.settings.setValue("reader/outline-width", self.reader.outline_width())
         self.settings.setValue("window/geometry", self.saveGeometry())
         self.settings.setValue("window/state", self.saveState())
         # Belt and braces, not a fix for anything observed: a normal quit does
