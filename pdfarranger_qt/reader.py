@@ -35,7 +35,12 @@ from typing import List, Optional
 
 from PySide6.QtCore import QAbstractItemModel, QModelIndex, Qt, Signal
 from PySide6.QtGui import (
-    QBrush, QColor, QDesktopServices, QFont, QPainter, QPalette,
+    QBrush,
+    QColor,
+    QDesktopServices,
+    QFont,
+    QPainter,
+    QPalette,
 )
 from PySide6.QtPdf import QPdfSearchModel
 from PySide6.QtPdfWidgets import QPdfPageSelector
